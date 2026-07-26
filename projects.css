@@ -1,0 +1,272 @@
+/*=========================================
+PROJECTS.CSS
+HARASHII PORTFOLIO 2026
+=========================================*/
+
+/*========== SECTION ==========*/
+
+.projects{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.projects .container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+gap:35px;
+
+}
+
+/*========== CARD ==========*/
+
+.project-card{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:28px;
+
+background:var(--glass-bg);
+
+backdrop-filter:blur(var(--blur));
+
+border:1px solid var(--glass-border);
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+}
+
+.project-card:hover{
+
+transform:translateY(-15px);
+
+box-shadow:var(--shadow-primary);
+
+}
+
+/*========== IMAGE ==========*/
+
+.project-image{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.project-image img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+transition:.6s ease;
+
+}
+
+.project-card:hover img{
+
+transform:scale(1.12);
+
+}
+
+/*========== OVERLAY ==========*/
+
+.project-overlay{
+
+position:absolute;
+
+inset:0;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:18px;
+
+background:rgba(8,12,25,.82);
+
+opacity:0;
+
+transition:.45s;
+
+}
+
+.project-card:hover .project-overlay{
+
+opacity:1;
+
+}
+
+/*========== BUTTONS ==========*/
+
+.project-links{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.project-links a{
+
+width:55px;
+
+height:55px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+background:var(--gradient-primary);
+
+color:#fff;
+
+font-size:20px;
+
+transition:.35s;
+
+}
+
+.project-links a:hover{
+
+transform:translateY(-6px) rotate(8deg);
+
+}
+
+/*========== CONTENT ==========*/
+
+.project-content{
+
+padding:28px;
+
+}
+
+.project-content h3{
+
+font-size:1.45rem;
+
+margin-bottom:12px;
+
+}
+
+.project-content p{
+
+color:var(--text-light);
+
+margin-bottom:22px;
+
+}
+
+/*========== TAGS ==========*/
+
+.project-tags{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+}
+
+.project-tags span{
+
+padding:8px 16px;
+
+border-radius:999px;
+
+background:var(--surface-light);
+
+border:1px solid var(--glass-border);
+
+font-size:.85rem;
+
+transition:.35s;
+
+}
+
+.project-tags span:hover{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+/*========== FEATURED ==========*/
+
+.project-card.featured{
+
+border:2px solid var(--primary);
+
+}
+
+/*========== BACKGROUND EFFECT ==========*/
+
+.projects::before{
+
+content:"";
+
+position:absolute;
+
+left:-180px;
+
+top:0;
+
+width:420px;
+
+height:420px;
+
+border-radius:50%;
+
+background:#6C63FF22;
+
+filter:blur(120px);
+
+z-index:-1;
+
+}
+
+.projects::after{
+
+content:"";
+
+position:absolute;
+
+right:-150px;
+
+bottom:-150px;
+
+width:350px;
+
+height:350px;
+
+border-radius:50%;
+
+background:#00E5FF18;
+
+filter:blur(120px);
+
+z-index:-1;
+
+}
